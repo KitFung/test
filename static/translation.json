@@ -1,0 +1,182 @@
+{
+  "Add Artwork Now": {
+    "en": "Add Artwork Now",
+    "zhcn": "立刻新增艺术品",
+    "zhtw": "立刻新增藝術品",
+    "es": "Añadir obra Ahora"
+  },
+  "Art recently added from across the ArtStack community": {
+    "en": "Art recently added from across the ArtStack community",
+    "zhcn": "艺堆社群里最近添加的艺术品",
+    "zhtw": "藝堆社群裡最近添加的藝術品",
+    "es": "Obras agregadas recientemente en toda la comunidad ArtStack"
+  },
+  "Stack art you love - this page has art from people, artists and labels you follow": {
+    "en": "Stack art you love - this page has art from people, artists and labels you follow",
+    "zhcn": "你关注的人们、艺术家、美术馆所分享的艺术品",
+    "zhtw": "你關注的人們、藝術家、美術館所分享的藝術品",
+    "es": "Obras de personas, artistas y etiquetas que sigues"
+  },
+  "Login with your facebook account": {
+    "en": "Login with your facebook account",
+    "zhcn": "使用Facebook帐户登录",
+    "zhtw": "使用Facebook帳戶登錄",
+    "es": "Iniciar sesión con tu cuenta de Facebook"
+  },
+  "Using Facebook makes it easier to find friends": {
+    "en": "Using Facebook makes it easier to find friends",
+    "zhcn": "使用Facebook注册，会更快捷，更易寻找朋友。",
+    "zhtw": "使用Facebook註冊，會更快捷，更易尋找朋友。",
+    "es": "Usar Facebook facilita la búsqueda de amigos"
+  },
+  "- Required field, if you are not sure you can use \"unknown\"": {
+    "en": "- Required field, if you are not sure you can use \"unknown\"", 
+    "zhcn": "- 必须填写的栏位，如果你不知道，你可以使用\"未知\"",
+    "zhtw": "- 必須填寫的欄位，如果你不知道，你可以使用\"未知\"",
+    "es": "- Campo obligatorio, si no está seguro puede usar \"Unknown\""
+  },
+  "- Only JPEG, GIF and PNG files can be uploaded to ArtStack. If you are typing to upload an image from an URL, please make sure you've copied the image URL (you can get this by right-clicking on the image) - this may be different from the web address of image.": {
+    "en": "- Only JPEG, GIF and PNG files can be uploaded to ArtStack. If you are typing to upload an image from an URL, please make sure you've copied the image URL (you can get this by right-clicking on the image) - this may be different from the web address of image.",
+    "zhcn": "－只能上传JPEG、GIF和PNG档案至艺堆。如果你以输入超链接的方式上载图像，请确保你已复制图像的超链接(你可以在图像按下滑鼠右键取得超链接)－图像的超链接或许与图像的网址有所不同。",
+    "zhtw": "－只能上傳JPEG、GIF和PNG檔案至藝堆。如果你以輸入超鏈接的方式上載圖像，請確保你已復製圖像的超鏈接(你可以在圖像按下滑鼠右鍵取得超鏈接)－圖像的超鏈接或許與圖像的網址有所不同。",
+    "es": "- Sólo archivos JPEG, GIF y PNG pueden cargarse a ArtStack. Si estás intentando cargar una imagen de una URL, por favor asegúrate de haber copiado la imagen URL (click derecho en la imagen) - esto puede diferir de la dirección web de la imagen."
+  },
+  "Sort by": {
+    "en": "Sort by",
+    "zhcn": "排序",
+    "zhtw": "排序",
+    "es": "Organizar por"
+  },
+  "Congratulations!": {
+    "en": "Congratulations!",
+    "zhcn": "恭喜！",
+    "zhtw": "恭喜！",
+    "es": "¡Felicitaciones!"
+  },
+  "Are they the same artwork?": {
+    "en": "Are they the same artwork?",
+    "zhcn": "它们是相同的艺术品吗？",
+    "zhtw": "它們是相同的藝術品嗎？",
+    "es": "¿Son la misma obra?"
+  },
+  "You did not provide any details for authentication.": {
+    "en": "You did not provide any details for authentication.",
+    "zhcn": "你没有提供任何认证资料。",
+    "zhtw": "你沒有提供任何認證資料。",
+    "es": "no ha proporcionado detalles para autenticar la cuenta."
+  },
+  "Email is not correct, we don't have any user registered with 'noexist'.": {
+    "en": "Email is not correct, we don't have any user registered with 'noexist'.",
+    "zhcn": "電郵地址不正確，我們沒有以'noexist'註冊的用戶。",
+    "zhtw": "电邮地址不正确，我们没有以'noexist'注册的用户。",
+    "es": "El correo electrónico no es correcta, no tenemos ningún usuario registrado con 'noexist'."
+  },
+  "Password is not correct.": {
+    "en": "Password is not correct.",
+    "zhcn": "密码不正确。",
+    "zhtw": "密碼不正確。",
+    "es": "La contraseña no es correcta."
+  },
+  "On Show Exhibitions":{
+    "en": "On Show Exhibitions",
+    "zhcn": "正在展出的展览",
+    "zhtw": "正在展出的展覽",
+    "es": "En Mostrar Exposiciones"
+  },
+  "Art trending from across the ArtStack community": {
+    "en": "Art trending from across the ArtStack community",
+    "zhcn": "艺堆社群里最近关注的艺术品",
+    "zhtw": "藝堆社群裡最近關注的藝術品",
+    "es": "Arte popular en toda la comunidad ArtStack"
+  },
+  "Reset your password in ArtStack": {
+    "en": "Reset your password in ArtStack",
+    "zhcn": "在艺堆上重设密码",
+    "zhtw": "在藝堆上重設密碼",
+    "es": "Cambiar tu contraseña de ArtStack"
+  },
+  "Edit my profile": {
+    "en": "Edit my profile",
+    "zhcn": "编辑我的页面",
+    "zhtw": "編輯我的頁面",
+    "es": "Editar mi perfil"
+  },
+  "Add to collection": {
+    "en": "Add to collection",
+    "zhcn": "加到收藏系列",
+    "zhtw": "加到收藏系列",
+    "es": "Agrega a un colección"
+  },
+  "Artwork info": {
+    "en": "Artwork info",
+    "zhcn": "艺术品資料",
+    "zhtw": "藝術品資料",
+    "es": "Info obra"
+  },
+  "Related artworks": {
+    "en": "Related artworks",
+    "zhcn": "相关艺术品",
+    "zhtw": "相關藝術品",
+    "es": "Otras obras"
+  },
+  "Comment": {
+    "en": "Comment",
+    "zhcn": "评论",
+    "zhtw": "評論",
+    "es": "Comentario"
+  },
+  "Stacked": {
+    "en": "Stacked",
+    "zhcn": "已添加到艺堆",
+    "zhtw": "已添加到藝堆",
+    "es": "Agregué a mi Stack"
+  },
+  "Following": {
+    "en": "Following",
+    "zhcn": "正在关注",
+    "zhtw": "正在關注",
+    "es": "Siguiendo"
+  },
+  "Follow": {
+    "en": "Follow",
+    "zhcn": "关注",
+    "zhtw": "關注",
+    "es": "Seguir"
+  },
+  "Search result": {
+    "en": "Search result",
+    "zhcn": "搜寻結果",
+    "zhtw": "搜尋結果",
+    "es": "Resultados de la búsqueda para"
+  },
+  "Collections of artworks loved by the people": {
+    "en": "Collections of artworks loved by the people",
+    "zhcn": "人们最喜爱的作品系列",
+    "zhtw": "人們最喜愛的作品系列",
+    "es": "Collections of artworks loved by the people"
+  },
+  "Edit Profile": {
+    "en": "Edit Profile",
+    "zhcn": "编辑页面",
+    "zhtw": "編輯頁面",
+    "es": "Editar perfil"
+  },
+  "Most Stacked": {
+    "en": "Most Stacked",
+    "zhcn": "艺堆十大",
+    "zhtw": "藝堆十大",
+    "es": "Collections of artworks loved by the people"
+  },
+  "Change password": {
+    "en": "Change password",
+    "zhcn": "变更密码",
+    "zhtw": "变更密码",
+    "es": "Cambiar contraseña"
+  },
+  "Password is incorrect": {
+    "en": "Password is incorrect",
+    "zhcn": "密码不正确",
+    "zhtw": "密碼不正確",
+    "es": "Contraseña incorrecta"
+  }
+}

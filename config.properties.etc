@@ -1,0 +1,29 @@
+STAGING_URL=http:\/\/ec2-23-20-138-112.compute-1.amazonaws.com
+PRODUCTION_URL=https:\/\/theartstack.com
+# Available option: EN, ZHCN, ZHTW, ES
+CURRENT_LANGUAGE=EN
+# Staging Account
+S_FIRST_NAME=Amelia J.
+S_LAST_NAME=Cherry
+S_EMAIL=AmeliaJ@CherryNotExist.com
+S_PASSWORD=testPassword
+S_USER_DOMAIN=amelia-j-cherr
+# Production Account
+P_FIRST_NAME=Tempora Q.
+P_LAST_NAME=Kelly
+P_EMAIL=TemporaQ@KellyNoExist.com
+P_PASSWORD=testPassword
+P_USER_DOMAIN=tempora-q-kell
+# Smoke Test Account
+SMOKE_EMAIL=tester@tester.com
+SMOKE_PASSWORD=testPassword
+# SignUpTest
+SIGNUP_NEW_EMAIL=deletedMeAfterCreate@email.com
+# SearchResultTest
+SEARCH_QUERY=123
+SEARCH_INDEX=0
+# AddArtworkTest
+ADDARTWORK_IMAGE_URL=http:\/\/i.imgur.com/M79Hi3e.jpg
+ADDARTWORK_WRONG_IMAGE_URL=http:\/\/i.imgur.com
+ADDARTWORK_YOUTUBEURL=https:\/\/www.youtube.com\/watcsh?i=UsnRQJxanVM
+ADDARTWORK_WRONG_YOUTUBEURL=https:\/\/www.youtube.com
