@@ -14,6 +14,11 @@ done
 
 # run
 cp config.properties.etc config.properties
+
 mvn -Dmaven.test.skip=true clean install
-mvn -Dwebdriver.chrome.bin=$chrome_loc -Dwebdriver.chrome.driver=$chrome_driver_loc -Dtest=ProductionSmokeTest $paramsstr test
+
+echo "mvn $paramsstr -Dwebdriver.chrome.bin=$chrome_loc -Dwebdriver.chrome.driver=$chrome_driver_loc -Dtest=ProductionSmokeTest test"
+
+mvn $paramsstr -Dwebdriver.chrome.bin=$chrome_loc -Dwebdriver.chrome.driver=$chrome_driver_loc -Dtest=ProductionSmokeTest test
+
 

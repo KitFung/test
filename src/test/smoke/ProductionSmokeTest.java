@@ -44,6 +44,8 @@ public class ProductionSmokeTest extends ProductionTest{
 
   @Test
   public void stage01_signup() {
+	org.junit.Assume.assumeTrue("true".equals(System.getProperty("includesignup")));
+
     WebElement firstName = driver.findElement(By.id("user_first_name"));
     WebElement lastName = driver.findElement(By.id("user_last_name"));
     WebElement email = driver.findElement(By.id("user_email"));
@@ -60,6 +62,8 @@ public class ProductionSmokeTest extends ProductionTest{
 
   @Test
   public void stage01a_selectCategory() throws InterruptedException {
+	org.junit.Assume.assumeTrue("true".equals(System.getProperty("includesignup")));
+
     Thread.sleep(9000);
     // It take a long time to sign up which may longer than implicitly wait sometime
     WebElement imgA = driver.findElement(By.xpath("//*[@id='landing-page']/div[3]"));
@@ -76,7 +80,9 @@ public class ProductionSmokeTest extends ProductionTest{
 
   @Test
   public void stage02_logout() throws InterruptedException {
-    Actions action = new Actions(driver);
+	org.junit.Assume.assumeTrue("true".equals(System.getProperty("includesignup")));
+    
+	Actions action = new Actions(driver);
     WebElement tri = driver.findElement(By.cssSelector("#line-nav > div.nav-box.dropdown-box > div"));
     action.moveToElement(tri).perform();
     Thread.sleep(3000);

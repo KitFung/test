@@ -68,9 +68,6 @@ public class TestBase {
 
     /* You can text other browser by changing this */
     ChromeOptions options = new ChromeOptions();
-    options.addArguments("--start-maximized");
-    options.addArguments("--no-sandbox");
-
     driver = new ChromeDriver(options);
     driver.manage().deleteAllCookies();
     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
