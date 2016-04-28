@@ -66,6 +66,10 @@ public class StagingSmokeTest extends StagingTest {
     browser.waitPageLoaded("/recommended_works");
     browser.goPage("");
     browser.waitPageLoaded("");
+    
+    if(driver.findElements(By.cssSelector("#invite-by-email .close")).size() > 0) {
+	   driver.findElement(By.cssSelector("#invite-by-email .close")).click();
+   }
   }
 
   @Test
@@ -88,6 +92,10 @@ public class StagingSmokeTest extends StagingTest {
 
    WebElement loginConfirm = driver.findElement(By.cssSelector("#login-pane > form > div.actionset > input[name='commit']"));
    loginConfirm.click();
+   
+   if(driver.findElements(By.cssSelector("#invite-by-email .close")).size() > 0) {
+	   driver.findElement(By.cssSelector("#invite-by-email .close")).click();
+   }
   }
 
   @Test

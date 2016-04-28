@@ -1,5 +1,6 @@
 package page;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -45,6 +46,13 @@ public class MyFeedPage extends Page implements IArtworkListComponent, INavigati
   public MyFeedPage switchToListMode() {
     listLayoutBtn.click();
     return this;
+  }
+  
+  public MyFeedPage closeInviteAlert() {
+	   if(driver.findElements(By.cssSelector("#invite-by-email .close")).size() > 0) {
+		   driver.findElement(By.cssSelector("#invite-by-email .close")).click();
+	   }
+	   return this;
   }
 
   /* Delegate function */

@@ -76,6 +76,10 @@ public class ProductionSmokeTest extends ProductionTest{
 
     WebElement nextBtn = driver.findElement(By.cssSelector("#landing-page > div.header > span.next"));
     nextBtn.click();
+    
+    if(driver.findElements(By.cssSelector("#invite-by-email .close")).size() > 0) {
+		   driver.findElement(By.cssSelector("#invite-by-email .close")).click();
+    }
   }
 
   @Test
@@ -100,6 +104,9 @@ public class ProductionSmokeTest extends ProductionTest{
 
    WebElement loginConfirm = driver.findElement(By.cssSelector("#login-pane > form > div.actionset > input[name='commit']"));
    loginConfirm.click();
+   if(driver.findElements(By.cssSelector("#invite-by-email .close")).size() > 0) {
+	   driver.findElement(By.cssSelector("#invite-by-email .close")).click();
+   }
   }
 
   @Test
