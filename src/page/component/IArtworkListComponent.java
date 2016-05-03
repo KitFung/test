@@ -29,6 +29,8 @@ public interface IArtworkListComponent {
 
   public String artistOfItemFromViewer();
 
+  public String artworkTypeFromViewer();
+  
   public String textOnTheStackButtonInThumb(int index);
 
   public String textOnTheStackButtonInViewer();

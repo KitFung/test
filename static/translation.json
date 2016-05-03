@@ -170,7 +170,7 @@
   "Change password": {
     "en": "Change password",
     "zhcn": "变更密码",
-    "zhtw": "变更密码",
+    "zhtw": "變更密碼",
     "es": "Cambiar contraseña"
   },
   "Password is incorrect": {
@@ -178,5 +178,17 @@
     "zhcn": "密码不正确",
     "zhtw": "密碼不正確",
     "es": "Contraseña incorrecta"
+  },
+  "BUY FROM": {
+    "en": "BUY FROM",
+    "zhcn": "BUY FROM",
+    "zhtw": "BUY FROM",
+    "es": "BUY FROM"
+    },
+  "Most stacked artworks this week": {
+    "en": "Most stacked artworks this week",
+    "zhcn": "Most stacked artworks this week",
+    "zhtw": "Most stacked artworks this week",
+    "es": "Most stacked artworks this week"
   }
 }

@@ -33,6 +33,9 @@ public class ArtworkListComponent implements IArtworkListComponent{
   @FindBy(css = "#artwork-viewer .artist-name a:nth-child(1)")
   private WebElement artistNameOnViewer;
 
+  @FindBy(css = ".work-container div.metadata-list > dl > dd > a")
+  private WebElement artworkTypeNameOnViewer;
+  
   @FindBy(id = "return-to-top")
   @CacheLookup
   private WebElement toTheTopBtn;
@@ -143,6 +146,11 @@ public class ArtworkListComponent implements IArtworkListComponent{
   @Override
   public int numberOfFeedItems() {
     return feedItems.size();
+  }
+
+  @Override
+  public String artworkTypeFromViewer() {
+	return artworkTypeNameOnViewer.getText();
   }
 
 }

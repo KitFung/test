@@ -144,6 +144,11 @@ public class MyFeedPage extends Page implements IArtworkListComponent, INavigati
   public int numberOfFeedItems() {
     return artworkList.numberOfFeedItems();
   }
+  
+  @Override
+  public String artworkTypeFromViewer() {
+	return artworkList.artworkTypeFromViewer();
+  }
 
   @Override
   public INavigationBarComponent searchArtwork(String query) {
