@@ -77,8 +77,8 @@ public class ProductionSmokeTest extends ProductionTest{
     WebElement nextBtn = driver.findElement(By.cssSelector("#landing-page > div.header > span.next"));
     nextBtn.click();
     
-    if(driver.findElements(By.cssSelector("#invite-by-email .close")).size() > 0) {
-		   driver.findElement(By.cssSelector("#invite-by-email .close")).click();
+    if(driver.findElements(By.cssSelector("#fb-timeline-overlay_wrapper")).size() > 0) {
+ 	   driver.get(browser.fullURL(""));
     }
   }
 
