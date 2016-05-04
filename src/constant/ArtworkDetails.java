@@ -2,7 +2,6 @@ package constant;
 
 public class ArtworkDetails {
 	public enum ArtworkType implements ISelectableOption { // Be careful when using getArrayIndex of this type.
-		ALL_TYPES("All Types", 0),
 		PAINTING("Painting", 1),
 		PHOTOGRAPHY("Photography", 2),
 		SCULPTURE("Sculpture", 3),

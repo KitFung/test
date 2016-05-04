@@ -1,6 +1,6 @@
 package test.functional;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.*;
 
 import java.io.UnsupportedEncodingException;
 
@@ -46,13 +46,14 @@ public class ExploreTest extends ProductionTest {
 
   @Test
   public void test01_allArtworkType() throws InterruptedException {
+
     for(ArtworkType t:ArtworkType.values()) {
       if(t == ArtworkType.OTHER) break;
+      
       String tmpName = page.nameOfItemFromThumb(1);
       page.selectArtworkType(t);
       Thread.sleep(4000);
       assertFalse(tmpName.equals(page.nameOfItemFromThumb(1)));
-      tmpName = page.artistOfItemFromThumb(1);
     }
   }
 
@@ -86,7 +87,10 @@ public class ExploreTest extends ProductionTest {
   @Test
   public void test04_allCombineAllYearArtworkType() throws InterruptedException {
     for(YearRange t1:YearRange.values()) {
+    	System.out.println(t1.name());
+    	
       page.selectArtworkYear(t1);
+      
       for(ArtworkType t2:ArtworkType.values()) {
         if(t2 == ArtworkType.OTHER) break;
         page.selectArtworkType(t2);

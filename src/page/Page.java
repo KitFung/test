@@ -96,13 +96,13 @@ public class Page {
 	public void selectDropdownOptionByIndex(WebElement dropDownOpenDiv, WebElement dropDownDiv, ISelectableOption option) {
 		openDropDownList(dropDownOpenDiv, dropDownDiv);
 		String selector = String.format("li[data-option-array-index='%d']", option.getArrayIndex());
-		driver.findElement(By.cssSelector(selector)).click();
+		dropDownDiv.findElement(By.cssSelector(selector)).click();
 	}
 	
 	public void selectDropdownOptionByName(WebElement dropDownOpenDiv, WebElement dropDownDiv, String name) {
 		openDropDownList(dropDownOpenDiv, dropDownDiv);
 		String selector = String.format("//li[contains(text(), '%s')]", name);
-		driver.findElement(By.xpath(selector)).click();
+		dropDownDiv.findElement(By.xpath(selector)).click();
 	}
 
 }
