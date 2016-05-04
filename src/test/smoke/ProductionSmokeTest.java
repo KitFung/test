@@ -104,8 +104,8 @@ public class ProductionSmokeTest extends ProductionTest{
 
    WebElement loginConfirm = driver.findElement(By.cssSelector("#login-pane > form > div.actionset > input[name='commit']"));
    loginConfirm.click();
-   if(driver.findElements(By.cssSelector("#invite-by-email .close")).size() > 0) {
-	   driver.findElement(By.cssSelector("#invite-by-email .close")).click();
+   if(driver.findElements(By.cssSelector("#fb-timeline-overlay_wrapper")).size() > 0) {
+	   driver.get(browser.fullURL(""));
    }
   }
 
