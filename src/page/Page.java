@@ -86,7 +86,7 @@ public class Page {
 
 	public void openDropDownList(WebElement dropDownOpenDiv, WebElement dropDownDiv) {
 		dropDownOpenDiv.click();
-		(new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+		(new WebDriverWait(driver, 15)).until(new ExpectedCondition<Boolean>() {
 			public Boolean apply(WebDriver d) {
 				List<String> allClass = Arrays.asList(dropDownDiv.getAttribute("class").split(" "));
 				return allClass.contains("chosen-with-drop");
