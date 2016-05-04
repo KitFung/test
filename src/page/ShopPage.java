@@ -2,6 +2,7 @@ package page;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -15,7 +16,7 @@ import page.component.ProductListComponent;
 
 public class ShopPage extends Page implements IProductListComponent {
 
-	private ProductListComponent artworkList;
+	private ProductListComponent productList;
 	public final static String pageUrl = "/shop";
 
 	public final static String pageLoadedText = "BUY FROM";
@@ -50,7 +51,7 @@ public class ShopPage extends Page implements IProductListComponent {
 
 	public ShopPage(WebDriver driver, String customPageLoadedText) {
 		super(driver, pageUrl, customPageLoadedText);
-		artworkList = PageFactory.initElements(driver, ProductListComponent.class);
+		productList = PageFactory.initElements(driver, ProductListComponent.class);
 	}
 
 	public ShopPage selectSortByCondition(SortCondition cond) {
@@ -66,6 +67,15 @@ public class ShopPage extends Page implements IProductListComponent {
 				sortByCurrency,
 				sortByCurrency,
 				cur);
+		return this;
+	}
+	
+	public ShopPage switchBuyFrom(boolean onlyFollowedArtisits) {
+		if(!onlyFollowedArtisits) {
+			driver.findElement(By.xpath("//*[@id='source-menu']/label[@class='row'][1]")).click();
+		} else {
+			driver.findElement(By.xpath("//*[@id='source-menu']/label[@class='row'][2]")).click();
+		}
 		return this;
 	}
 
@@ -95,23 +105,75 @@ public class ShopPage extends Page implements IProductListComponent {
 
 	@Override
 	public IProductListComponent clickProductsAt(int index) {
-		artworkList.clickProductsAt(index);
+		productList.clickProductsAt(index);
 		return this;
+	}
+	
+	@Override
+	public String getFullPriceAtThumb(int index) {
+		return productList.getFullPriceAtThumb(index);
 	}
 
 	@Override
-	public ShopPage closeViewer() {
-		artworkList.closeViewer();
+	public String getProductNameAtThumb(int index) {
+		return productList.getProductNameAtThumb(index);
+	}
+
+	@Override
+	public String getArtisitNameAtThumb(int index) {
+		return productList.getArtisitNameAtThumb(index);
+	}
+	
+	@Override
+	public String getFullFollowerInfoAtThumb(int index) {
+		return productList.getFullFollowerInfoAtThumb(index);
+	}
+
+	@Override
+	public String getOriginalPriceAtViewer() {
+		return productList.getOriginalPriceAtViewer();
+	}
+
+	@Override
+	public String getLocalizedPriceAtViewer() {
+		return productList.getLocalizedPriceAtViewer();
+	}
+
+	@Override
+	public String getProductNameAtViewer() {
+		return productList.getProductNameAtViewer();
+	}
+
+	@Override
+	public String getArtisitNameAtViewer() {
+		return productList.getArtisitNameAtViewer();
+	}
+
+	@Override
+	public IProductListComponent clickBuyAtViewer() {
+		productList.clickBuyAtViewer();
 		return this;
 	}
 	
 	@Override
 	public List<WebElement> getArtworkTagFromViewer() {
-		return artworkList.getArtworkTagFromViewer();
+		return productList.getArtworkTagFromViewer();
+	}
+	
+	@Override
+	public String getFullFollowerInfoAtViewer() {
+		return productList.getFullFollowerInfoAtViewer();
+	}
+
+	@Override
+	public IProductListComponent closeViewer() {
+		productList.closeViewer();
+		return this;
 	}
 
 	@Override
 	public int numberOfProducts() {
-		return artworkList.numberOfProducts();
+		return productList.numberOfProducts();
 	}
+
 }
