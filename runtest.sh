@@ -7,6 +7,7 @@ chrome_driver_loc="$1"
 chrome_loc="$2"
 allparams="$3"
 
+
 paramsstr=""
 for param in $allparams
 do
@@ -20,8 +21,8 @@ cp config.properties.etc config.properties
 
 mvn -Dmaven.test.skip=true clean install
 
-echo "mvn $paramsstr -Dwebdriver.chrome.bin=$chrome_loc -Dwebdriver.chrome.driver=$chrome_driver_loc -Dtest=ProductionSmokeTest test"
+echo "mvn -Dwebdriver.chrome.bin=$chrome_loc -Dwebdriver.chrome.driver=$chrome_driver_loc -Dtest=ProductionSmokeTest $paramsstr test"
 
-mvn $paramsstr -Dwebdriver.chrome.bin=$chrome_loc -Dwebdriver.chrome.driver=$chrome_driver_loc -Dtest=ProductionSmokeTest test
+mvn -Dwebdriver.chrome.bin=$chrome_loc -Dwebdriver.chrome.driver=$chrome_driver_loc -Dtest=ProductionSmokeTest $paramsstr test
 
 
