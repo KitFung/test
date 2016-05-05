@@ -21,8 +21,8 @@ cp config.properties.etc config.properties
 
 mvn -Dmaven.test.skip=true clean install
 
-echo "mvn -Dwebdriver.chrome.bin=$chrome_loc -Dwebdriver.chrome.driver=$chrome_driver_loc -Dtest=ProductionSmokeTest $paramsstr test"
+echo "mvn -fn -Dwebdriver.chrome.bin=$chrome_loc -Dwebdriver.chrome.driver=$chrome_driver_loc -Dtest=ProductionSmokeTest $paramsstr test"
 
-mvn -Dwebdriver.chrome.bin=$chrome_loc -Dwebdriver.chrome.driver=$chrome_driver_loc -Dtest=ProductionSmokeTest $paramsstr test
+mvn -fn -Dwebdriver.chrome.bin=$chrome_loc -Dwebdriver.chrome.driver=$chrome_driver_loc -Dtest=ProductionSmokeTest $paramsstr test
 
 
