@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 
 import page.ChangePasswordPage;
-import page.MyFeedPage;
+import page.PageUtil;
 import page.SignInPage;
 import test.ProductionTest;
 
@@ -21,12 +21,7 @@ public class ChangePasswordTest extends ProductionTest{
 
   @BeforeClass
   public static void beforeClass() throws InterruptedException {
-    browser.goPage(SignInPage.pageUrl);
-    SignInPage signInPage = PageFactory.initElements(driver, SignInPage.class);
-    signInPage.fillEmail(email)
-              .fillPassword(password)
-              .clickLogIn();
-    browser.checkPageIsOpened(MyFeedPage.pageUrl, _t(MyFeedPage.pageLoadedText));
+	PageUtil.quickSignIn(driver, browser, email, password, isStaging);
     browser.goPage(ChangePasswordPage.pageUrl);
     browser.checkPageIsOpened(ChangePasswordPage.pageUrl, _t(ChangePasswordPage.pageLoadedText));
     Thread.sleep(1000);

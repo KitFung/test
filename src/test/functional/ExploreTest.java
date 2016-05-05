@@ -14,8 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import constant.ArtworkDetails.ArtworkType;
 import constant.ArtworkDetails.YearRange;
 import page.ExplorePage;
-import page.MyFeedPage;
-import page.SignInPage;
+import page.PageUtil;
 import test.ProductionTest;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -29,12 +28,7 @@ public class ExploreTest extends ProductionTest {
 
   @BeforeClass
   public static void beforeClass() {
-    browser.goPage(SignInPage.pageUrl);
-    SignInPage signInPage = PageFactory.initElements(driver, SignInPage.class);
-    signInPage.fillEmail(email)
-              .fillPassword(password)
-              .clickLogIn();
-    browser.checkPageIsOpened(MyFeedPage.pageUrl, _t(MyFeedPage.getPageLoadedText(isStaging)));
+	  PageUtil.quickSignIn(driver, browser, email, password, isStaging);
   }
 
   @Before
@@ -64,7 +58,6 @@ public class ExploreTest extends ProductionTest {
       page.selectArtworkYear(t);
       Thread.sleep(4000);
       assertFalse(tmpName.equals(page.nameOfItemFromThumb(1)));
-      tmpName = page.artistOfItemFromThumb(1);
     }
   }
 
@@ -87,7 +80,6 @@ public class ExploreTest extends ProductionTest {
   @Test
   public void test04_allCombineAllYearArtworkType() throws InterruptedException {
     for(YearRange t1:YearRange.values()) {
-    	System.out.println(t1.name());
     	
       page.selectArtworkYear(t1);
       

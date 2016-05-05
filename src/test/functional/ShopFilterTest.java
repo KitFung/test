@@ -18,9 +18,8 @@ import constant.ArtworkDetails.ArtworkType;
 import constant.ShopFilterDetails.SortCondition;
 import constant.ShopFilterDetails.SortCurrency;
 import helper.StringDecoder;
-import page.MyFeedPage;
+import page.PageUtil;
 import page.ShopPage;
-import page.SignInPage;
 import test.StagingTest;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -35,13 +34,7 @@ public class ShopFilterTest extends StagingTest{
 
 	@BeforeClass
 	public static void beforeClass() {
-		browser.goPage(SignInPage.pageUrl);
-		SignInPage signInPage = PageFactory.initElements(driver, SignInPage.class);
-		signInPage.fillEmail(email)
-		.fillPassword(password)
-		.clickLogIn();
-		String keySentence = MyFeedPage.getPageLoadedText(isStaging);
-		browser.checkPageIsOpened(MyFeedPage.pageUrl, _t(keySentence));
+		PageUtil.quickSignIn(driver, browser, email, password, isStaging);
 	}
 
 	@Before

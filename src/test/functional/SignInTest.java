@@ -61,7 +61,7 @@ public class SignInTest extends ProductionTest{
   }
 
   private void confirmTheSignUpBoxIsAppear() throws InterruptedException {
-    (new WebDriverWait(driver, 3)).until(
+    (new WebDriverWait(driver, 5)).until(
         ExpectedConditions.not(
             ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("signup-container-wrapper"))));
     Thread.sleep(4000);

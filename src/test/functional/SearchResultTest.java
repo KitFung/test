@@ -17,8 +17,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import constant.ArtworkDetails.ArtworkLabel;
 import page.MyFeedPage;
+import page.PageUtil;
 import page.SearchResultPage;
-import page.SignInPage;
 import test.ProductionTest;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -48,13 +48,7 @@ public class SearchResultTest extends ProductionTest{
     query = properties.getProperty("SEARCH_QUERY");
     index = Integer.parseInt(properties.getProperty("SEARCH_INDEX"));
 
-    browser.goPage(SignInPage.pageUrl);
-    SignInPage signInPage = PageFactory.initElements(driver, SignInPage.class);
-    signInPage.fillEmail(email)
-              .fillPassword(password)
-              .clickLogIn();
-    String keySentence = MyFeedPage.getPageLoadedText(isStaging);
-    browser.checkPageIsOpened(MyFeedPage.pageUrl, _t(keySentence));
+    PageUtil.quickSignIn(driver, browser, email, password, isStaging);
   }
 
   @Before

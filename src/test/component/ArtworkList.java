@@ -16,12 +16,11 @@ import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import page.MyFeedPage;
-import page.SignInPage;
+import page.PageUtil;
 import page.component.IArtworkListComponent;
 import test.ProductionTest;
 
@@ -33,12 +32,7 @@ import test.ProductionTest;
 
   @BeforeClass
   public static void beforeClass() {
-    browser.goPage(SignInPage.pageUrl);
-    SignInPage signInPage = PageFactory.initElements(driver, SignInPage.class);
-    signInPage.fillEmail(email)
-              .fillPassword(password)
-              .clickLogIn();
-    browser.checkPageIsOpened(MyFeedPage.pageUrl, _t(MyFeedPage.getPageLoadedText(isStaging)));
+	  PageUtil.quickSignIn(driver, browser, email, password, isStaging);
   }
 
   /**

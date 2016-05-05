@@ -11,7 +11,7 @@ import org.junit.runners.MethodSorters;
 import org.openqa.selenium.support.PageFactory;
 
 import page.MyFeedPage;
-import page.SignInPage;
+import page.PageUtil;
 import test.ProductionTest;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -29,13 +29,7 @@ public class MyFeedStackTest extends ProductionTest{
 
   @BeforeClass
   public static void beforeClass() {
-    browser.goPage(SignInPage.pageUrl);
-    SignInPage signInPage = PageFactory.initElements(driver, SignInPage.class);
-    signInPage.fillEmail(email)
-              .fillPassword(password)
-              .clickLogIn();
-    String keySentence = MyFeedPage.getPageLoadedText(isStaging);
-    browser.checkPageIsOpened(MyFeedPage.pageUrl, _t(keySentence));
+	PageUtil.quickSignIn(driver, browser, email, password, isStaging);
   }
 
   @Before

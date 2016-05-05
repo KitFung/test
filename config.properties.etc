@@ -25,5 +25,5 @@ SEARCH_INDEX=0
 # AddArtworkTest
 ADDARTWORK_IMAGE_URL=http:\/\/i.imgur.com/M79Hi3e.jpg
 ADDARTWORK_WRONG_IMAGE_URL=http:\/\/i.imgur.com
-ADDARTWORK_YOUTUBEURL=https:\/\/www.youtube.com\/watcsh?i=UsnRQJxanVM
+ADDARTWORK_YOUTUBEURL=https:\/\/www.youtube.com\/watch?v=li-QSLbXKOg
 ADDARTWORK_WRONG_YOUTUBEURL=https:\/\/www.youtube.com

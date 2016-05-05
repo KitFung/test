@@ -22,8 +22,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 import page.AddArtworkPage;
-import page.MyFeedPage;
-import page.SignInPage;
+import page.PageUtil;
 import page.AddArtworkPage.PictureUploadMode;
 
 import test.StagingTest;
@@ -58,12 +57,7 @@ public class AddArtworkTest extends StagingTest{
     youtubeURL = properties.getProperty("ADDARTWORK_YOUTUBEURL");
     wrongYoutubeURL = properties.getProperty("ADDARTWORK_WRONG_YOUTUBEURL");
 
-    browser.goPage(SignInPage.pageUrl);
-    SignInPage signInPage = PageFactory.initElements(driver, SignInPage.class);
-    signInPage.fillEmail(email)
-              .fillPassword(password)
-              .clickLogIn();
-    browser.checkPageIsOpened(MyFeedPage.pageUrl, MyFeedPage.pageLoadedTextStaging);
+    PageUtil.quickSignIn(driver, browser, email, password, isStaging);
     browser.goPage(AddArtworkPage.pageUrl);
     browser.checkPageIsOpened(AddArtworkPage.pageUrl, _t(AddArtworkPage.pageLoadedText));
   }

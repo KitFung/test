@@ -11,8 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import constant.Language;
 import page.EditProfilePage;
-import page.MyFeedPage;
-import page.SignInPage;
+import page.PageUtil;
 import test.ProductionTest;
 import test.TestBase;
 
@@ -27,12 +26,7 @@ public class EditProfileTest extends ProductionTest{
 
   @BeforeClass
   public static void beforeClass() throws InterruptedException {
-    browser.goPage(SignInPage.pageUrl);
-    SignInPage signInPage = PageFactory.initElements(driver, SignInPage.class);
-    signInPage.fillEmail(email)
-              .fillPassword(password)
-              .clickLogIn();
-    browser.checkPageIsOpened(MyFeedPage.pageUrl, _t(MyFeedPage.pageLoadedText));
+	PageUtil.quickSignIn(driver, browser, email, password, isStaging);
     browser.goPage(EditProfilePage.pageUrl);
     browser.checkPageIsOpened(EditProfilePage.pageUrl, _t(EditProfilePage.pageLoadedText));
     Thread.sleep(1000);
