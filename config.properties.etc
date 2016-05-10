@@ -1,5 +1,7 @@
 STAGING_URL=http:\/\/ec2-23-20-138-112.compute-1.amazonaws.com
 PRODUCTION_URL=https:\/\/theartstack.com
+TARGET_BROWSER=chrome
+EXISTED_DRIVER=true
 # Available option: EN, ZHCN, ZHTW, ES
 CURRENT_LANGUAGE=EN
 # Staging Account

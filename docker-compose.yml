@@ -1,0 +1,16 @@
+chrome:
+  image: selenium/standalone-chrome:2.53.0
+  ports:
+    - "4444:4444"
+  environment:
+    - SCREEN_WIDTH=1280
+    - SCREEN_HEIGHT=1024
+    - SCREEN_DEPTH=16
+artstack-test:
+  image: kitfung/artstack-test-beta
+  links:
+    - chrome
+  environment:
+    - ARGU=${text}
+  volumes:
+    - /tmp/docker-m2cache:/root/.m2:rw
