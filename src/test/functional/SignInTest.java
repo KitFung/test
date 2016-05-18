@@ -153,46 +153,46 @@ public class SignInTest extends ProductionTest{
   }
 
   @Test
-  public void test08_homeBtn() {
+  public void test08_clickHomeBtnWithOutLogin() {
     page.clickHomeBtn();
     browser.checkPageIsOpened("", _t("Using Facebook makes it easier to find friends"));
   }
 
   @Test
-  public void test09_myFeed() {
+  public void test09_clickMyFeedWithOutLogin() {
     page.clickMyFeed();
     browser.checkPageIsOpened("", _t("Using Facebook makes it easier to find friends"));
   }
 
   @Test
-  public void test10_explore() throws InterruptedException {
+  public void test10_clickExploreWithOutLogin() throws InterruptedException {
     page.clickExplore();
     browser.checkPageIsOpened("/all_added", _t("Art recently added from across the ArtStack community"));
     confirmTheSignUpBoxIsAppear();
   }
 
   @Test
-  public void test11_exhibitions() throws InterruptedException {
+  public void test11_clickExhibitionsWithOutLogin() throws InterruptedException {
     page.clickExhibitions();
     browser.checkPageIsOpened("/exhibitions/on_show", _t("On Show Exhibitions"));
     confirmTheSignUpBoxIsAppear();
   }
 
   @Test
-  public void test12_trending() throws InterruptedException{
+  public void test12_clickTrendingWithOutLogin() throws InterruptedException{
     page.clickTrending();
     browser.checkPageIsOpened("/trending", _t("Art trending from across the ArtStack community"));
     confirmTheSignUpBoxIsAppear();
   }
 
   @Test
-  public void test13_addArtwork() {
+  public void test13_clickAddArtworkWithOutLogin() {
     page.clickAddArtwork();
     browser.checkPageIsOpened(SignUpPage.pageUrl, SignUpPage.pageLoadedText);
   }
 
   @Test
-  public void test14_addFriends() {
+  public void test14_clickAddFriendsWithOutLogin() {
     page.clickAddFriends();
     browser.checkPageIsOpened(SignUpPage.pageUrl, SignUpPage.pageLoadedText);
   }

@@ -45,7 +45,7 @@ public class ShopFilterTest extends StagingTest{
 	}
 
 	@Test
-	public void test01_filterType() throws InterruptedException {
+	public void test01_artworkTypeFiltering() throws InterruptedException {
 		page.filterByArtworkType(ArtworkType.NETART);
 		page.clickProductsAt(0);
 		Thread.sleep(3000);
@@ -75,7 +75,7 @@ public class ShopFilterTest extends StagingTest{
 	}
 
 	@Test
-	public void test02a_sortByCondition_low2high() throws InterruptedException {
+	public void test02a_productSorting_low2high() throws InterruptedException {
 		page.selectSortByCondition(SortCondition.PRICE_LOW_TO_HIGH);
 		Thread.sleep(3000);
 		ArrayList<Double> arr = getPriceList();
@@ -85,7 +85,7 @@ public class ShopFilterTest extends StagingTest{
 	}
 	
 	@Test
-	public void test02b_sortByCondition_high2low() throws InterruptedException {
+	public void test02b_productSorting_high2low() throws InterruptedException {
 		page.selectSortByCondition(SortCondition.PRICE_HIGH_TO_LOW);
 		Thread.sleep(3000);
 		ArrayList<Double> arr = getPriceList();
@@ -95,7 +95,7 @@ public class ShopFilterTest extends StagingTest{
 	}
 	
 	@Test
-	public void test02c_sortByCondition_relevance() throws InterruptedException {
+	public void test02c_productSorting_relevance() throws InterruptedException {
 		page.selectSortByCondition(SortCondition.RELEVANCE);
 		Thread.sleep(3000);
 		ArrayList<Integer> arr = new ArrayList<Integer>();
@@ -108,7 +108,7 @@ public class ShopFilterTest extends StagingTest{
 	}
 	
 	@Test
-	public void test03_sortByCurrency() throws InterruptedException {
+	public void test03_currencySorting() throws InterruptedException {
 		page.selectSortByCurrency(SortCurrency.GBP);
 		Thread.sleep(3000);
 		for(int i = 0; i < page.numberOfProducts(); ++i) {
@@ -156,7 +156,7 @@ public class ShopFilterTest extends StagingTest{
 	 * @throws InterruptedException
 	 */
 	@Test
-	public void test06_switchBuyFrom() throws InterruptedException {
+	public void test06_switchBuyFromOption() throws InterruptedException {
 		int productcountBefore = page.numberOfProducts();
 		page.switchBuyFrom(true);
 		Thread.sleep(3000);

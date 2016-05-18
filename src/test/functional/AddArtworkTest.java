@@ -113,7 +113,7 @@ public class AddArtworkTest extends StagingTest{
   }
 
   @Test
-  public void test01_uploadWithoutAnything() throws InterruptedException {
+  public void test01_uploadWithoutFileAndDetail() throws InterruptedException {
     page.uploadArtwork();
     Thread.sleep(5000);
     List<WebElement> errors = driver.findElementsByClassName("error-message");
@@ -135,7 +135,7 @@ public class AddArtworkTest extends StagingTest{
   }
 
   @Test
-  public void test03_uploadWithoutPicture() {
+  public void test03_uploadWithoutFile() {
     page.fillArtistName(artworkName);
     page.fillTitle(artworkName);
     page.uploadArtwork();
@@ -145,7 +145,7 @@ public class AddArtworkTest extends StagingTest{
   }
 
   @Test
-  public void test03a_uploadWithoutPictureType() {
+  public void test03a_uploadWithWrongArtworkPath() {
     page.chooseImageFromLocalFile(this.fullFilePath(wrongArtworkPath));
     page.fillArtistName(artistName);
     page.fillTitle(artworkName);

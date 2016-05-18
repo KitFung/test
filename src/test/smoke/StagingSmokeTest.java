@@ -45,6 +45,7 @@ public class StagingSmokeTest extends StagingTest {
 
   @Test
   public void stage01_signup() {
+	org.junit.Assume.assumeTrue("true".equals(System.getProperty("includesignup")));
     WebElement firstName = driver.findElement(By.id("user_first_name"));
     WebElement lastName = driver.findElement(By.id("user_last_name"));
     WebElement email = driver.findElement(By.id("user_email"));
@@ -61,6 +62,7 @@ public class StagingSmokeTest extends StagingTest {
 
   @Test
   public void stage01a_selectCategory() throws InterruptedException {
+	org.junit.Assume.assumeTrue("true".equals(System.getProperty("includesignup")));
     Thread.sleep(9000);
     // Skip this part since staging server cannot select category
     browser.waitPageLoaded("/recommended_works");
@@ -74,6 +76,7 @@ public class StagingSmokeTest extends StagingTest {
 
   @Test
   public void stage02_logout() throws InterruptedException {
+    org.junit.Assume.assumeTrue("true".equals(System.getProperty("includesignup")));
     Actions action = new Actions(driver);
     WebElement tri = driver.findElement(By.cssSelector("#line-nav > div.nav-box.dropdown-box > div"));
     action.moveToElement(tri).perform();
@@ -99,18 +102,15 @@ public class StagingSmokeTest extends StagingTest {
   }
 
   @Test
-  public void stage04_enlargeImage() throws InterruptedException {
+  public void stage04_openCloseViewer() throws InterruptedException {
     driver.findElement(By.cssSelector("#left-console"));
-//    Thread.sleep(5000);
     driver.findElement(By.cssSelector("div.work-image")).click();
-
-    /* Cannot find another method except thread sleep*/
     Thread.sleep(5000);
     new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[@id='artwork-viewer']/div[2]"))).get(0).click();
   }
 
   @Test
-  public void stage05_stackAnArtwork() throws InterruptedException {
+  public void stage05_stackArtworkInMyFeed() throws InterruptedException {
     new WebDriverWait(driver, 5).until(ExpectedConditions.invisibilityOfElementLocated(By.className("filter-loading")));
     List<WebElement> allAddSlackBtns = driver.findElements(By.className("stacking-button-small"));
     WebElement element = allAddSlackBtns.get(0);

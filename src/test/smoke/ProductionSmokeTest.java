@@ -110,25 +110,22 @@ public class ProductionSmokeTest extends ProductionTest{
   }
 
   @Test
-  public void stage04_enlargeImage() throws InterruptedException {
+  public void stage04_openCloseViewer() throws InterruptedException {
     driver.findElement(By.cssSelector("#left-console"));
-//    Thread.sleep(5000);
     driver.findElement(By.cssSelector("div.work-image")).click();
 
-    /* Cannot find another method except thread sleep*/
     Thread.sleep(5000);
     new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[@id='artwork-viewer']/div[2]"))).get(0).click();
   }
 
   @Test
-  public void stage05_stackAnArtwork() throws InterruptedException {
+  public void stage05_stackArtworkInMyFeed() throws InterruptedException {
     new WebDriverWait(driver, 5).until(ExpectedConditions.invisibilityOfElementLocated(By.className("filter-loading")));
     List<WebElement> allAddSlackBtns = driver.findElements(By.className("stacking-button-small"));
     WebElement element = allAddSlackBtns.get(0);
     browser.scrollAndClick(element);
 
     Thread.sleep(3000);
-    //unstack
     element.click();
   }
 

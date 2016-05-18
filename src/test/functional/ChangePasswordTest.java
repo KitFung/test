@@ -41,7 +41,7 @@ public class ChangePasswordTest extends ProductionTest{
   }
 
   @Test
-  public void test02_successChanged() throws InterruptedException {
+  public void test02_successChangedPassword() throws InterruptedException {
     String newPassword = "12345678";
 
     page.typeOldPassword(password)

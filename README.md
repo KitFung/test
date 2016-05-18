@@ -30,6 +30,25 @@ Testing through Command Line
 [see more](http://maven.apache.org/surefire/maven-surefire-plugin/examples/single-test.html) 
 
 
+Testing through docker-compose
+-----
+
+Requirement:
+
+- [docker](https://docs.docker.com/engine/installation/)
+- [docker-compose](https://docs.docker.com/compose/install/)
+
+```bash
+export text="test:{TEST_CLASS}"
+sudo -E docker-compose up artstack-test
+sudo docker cp $(sudo docker-compose ps -q artstack-test):/usr/src/app/target/surefire-reports/ ./
+sudo docker-compose down
+```
+
+if you want to run all the test class, change {TEST_CLASS} to .*
+if you want to run test class "A", change {TEST_CLASS} to A
+if you want to run test case "B" in test class "A", change {TEST_CLASS} to A#B
+
 Optional
 -----
 1. You can change the testing browser by changing the initialise in the TestBase.java. But don't use the headless browser, it will cause unexpected behaviour which will loss the meaning of the test.
@@ -37,10 +56,10 @@ Optional
 Remind
 -----
 
-1. It is assume that your computer have install the webdriver globally and setup the path (chromedriver, etc) correctly.
+1. It is assume that your computer have install the webdriver globally and setup the path (chromedriver, etc) correctly (except 'Testing through docker-compose').
 
 2. Delete the account after you run the test that have created account.
 
 3. There are config part for each test suite. Check it before run test.
 
-4. It will take a screenshot to the desktop using the "classname-testcasename.png" format when any error or assertion fail happen.
+4. It will take a screenshot to the folder 'screenshot/failure' using the "classname-testcasename.png" format when any error or assertion fail happen.

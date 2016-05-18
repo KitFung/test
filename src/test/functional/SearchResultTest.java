@@ -65,7 +65,7 @@ public class SearchResultTest extends ProductionTest{
   }
 
   @Test
-  public void test01_searchEmpty() {
+  public void test01_searchEmptyString() {
     startPage.searchArtwork("");
     bindingPageToHTML();
     assertEquals(0, page.getArtworkNameResult().size());
@@ -123,7 +123,7 @@ public class SearchResultTest extends ProductionTest{
   }
 
   @Test
-  public void test09_followPeople() throws InterruptedException {
+  public void test09_followUser() throws InterruptedException {
     startPage.searchArtwork(query);
     bindingPageToHTML();
     page.followPeopleInIndex(index).goPeopleProfilePageInIndex(index);  

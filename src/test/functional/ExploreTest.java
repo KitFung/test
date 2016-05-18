@@ -39,7 +39,7 @@ public class ExploreTest extends ProductionTest {
   }
 
   @Test
-  public void test01_allArtworkType() throws InterruptedException {
+  public void test01_artworkTypeFiltering() throws InterruptedException {
 
     for(ArtworkType t:ArtworkType.values()) {
       if(t == ArtworkType.OTHER) break;
@@ -52,7 +52,7 @@ public class ExploreTest extends ProductionTest {
   }
 
   @Test
-  public void test02_allYear() throws InterruptedException {
+  public void test02_yearFiltering() throws InterruptedException {
     for(YearRange t:YearRange.values()) {
       String tmpName = page.nameOfItemFromThumb(1);
       page.selectArtworkYear(t);
@@ -62,7 +62,7 @@ public class ExploreTest extends ProductionTest {
   }
 
   @Test
-  public void test03_allMostStacked() throws InterruptedException, UnsupportedEncodingException {
+  public void test03_mostStackedFiltering() throws InterruptedException, UnsupportedEncodingException {
     for(ArtworkType t:ArtworkType.values()) {
       if(t == ArtworkType.OTHER) break;
       page.selectedMostedStacked(t);
@@ -78,7 +78,7 @@ public class ExploreTest extends ProductionTest {
    * picture under specific condition, don't check the image name;
    */
   @Test
-  public void test04_allCombineAllYearArtworkType() throws InterruptedException {
+  public void test04_yearAndArtworkTypeFiltering() throws InterruptedException {
     for(YearRange t1:YearRange.values()) {
     	
       page.selectArtworkYear(t1);
